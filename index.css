@@ -21,28 +21,36 @@
 
 @font-face {
   font-family: "PT Sans";
-  src: url("./fonts/PT Sans/PTC55F.ttf");
+  src: url("./fonts/PT Sans/PTSans-Regular.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "ArialMT";
+  src: url("./fonts/ArialMT/16063.ttf");
   font-style: normal;
   font-weight: normal;
 }
 
 /* ------------------------------------------*/
 
-#wrapper {
-  display: inline-block;
-  width: 500px !important;
-  border: 1px solid gray;
-  padding: 2px;
-}
-
 * {
   box-sizing: border-box;
 }
 
 .theyalow-body {
-  /*height: 1847px;*/
+  width: 1300px;
 
   text-align: center;
+}
+
+@media screen and (max-width: 680px) {
+
+  .theyalow-body {
+    width: 640px;
+  }
+
 }
 
 /* ------------------------------------------*/
@@ -52,6 +60,15 @@
   height: 566px;
 
   background: url("./img/upper_background.svg");
+}
+
+@media screen and (max-width: 680px) {
+
+  .upper-div {
+    width: 100%;
+    height: 389px;
+  }
+
 }
 
 /* ------------------------------------------*/
@@ -70,13 +87,12 @@
 }
 
 @media screen and (max-width: 680px) {
-  .upper-div {
-    height: 300px;
-  }
 
   .theyalow-header {
     padding-left: 0;
     padding-right: 0;
+
+    height: 62px;
   }
 }
 
@@ -90,6 +106,14 @@
 
   width: 560px;
   height: 100%;
+}
+
+@media screen and (max-width: 680px) {
+
+  .theyalow-logo {
+    width: 186px;
+  }
+
 }
 
 .theyalow-logo__block {
@@ -109,9 +133,34 @@
   align-items: center;
 }
 
+@media screen and (max-width: 680px) {
+
+  .theyalow-logo__block {
+    width: 186px;
+    height: 100%;
+
+    background: url("./img/lower_background.svg");
+
+    font-size: 20px;
+  }
+
+}
+
 .theyalow-logo__img {
   width: 83px;
   height: 83px;
+}
+
+@media screen and (max-width: 680px) {
+
+  .theyalow-logo__img {
+    width: 38px;
+    height: 37px;
+
+    margin: 13px;
+    margin-right: 5px;
+  }
+
 }
 
 /* ------------------------------------------*/
@@ -124,6 +173,16 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-end;
+}
+
+@media screen and (max-width: 680px) {
+
+  .theyalow-menu {
+    width: 455px;
+
+    font-size: 20px;
+  }
+
 }
 
 .theyalow-main-nav {
@@ -141,6 +200,16 @@
    -2px -1px rgb(220,195,35), -2px -2px rgb(192,167,7),
    -4px -3px rgb(219,194,34), -4px -4px rgb(191,166,6),
    -6px -5px rgb(218,193,33), -6px -6px rgb(190,165,5);
+}
+
+@media screen and (max-width: 680px) {
+
+  .theyalow-main-nav {
+    height: 100%;
+
+    box-shadow: none;
+  }
+
 }
 
 .theyalow-main-nav__menu {
@@ -166,6 +235,15 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 680px) {
+
+  .theyalow-main-nav__menu__li {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+
 }
 
 .theyalow-main-nav__menu__li:not(:last-child) { 
@@ -198,20 +276,6 @@
   color: rgba(0,0,0,1);
 }
 
-@media screen and (max-width: 680px) {
-  .top-menu {margin: 0;}
-  .theyalow-main-nav__menu li {
-    display: block;
-    margin-right: 0;
-  }
-  .theyalow-main-nav__menu:before, 
-  .theyalow-main-nav__menu:after {
-    content: none;
-  }
-  .theyalow-main-nav__menu a {
-    display: block;
-  }
-}
 
 /* ------------------------------------------*/
 
@@ -225,6 +289,14 @@
   height: 456px;
 }
 
+@media screen and (max-width: 680px) {
+
+  .theyalow-clip-area {
+    height: 327px;
+  }
+
+}
+
 .left-arrow-block {
   display: flex;
   flex-direction: column;
@@ -235,34 +307,41 @@
   height: 100%;
 }
 
-.clip-block {
-  position: relative;
+@media screen and (max-width: 680px) {
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  .left-arrow-block {
+    display: none;
+  }
 
-  width: 560px;
-  height: 100%;
-
-  overflow: hidden;
 }
 
-.theyalow-video-img {
-  position: absolute;
+.clip-block {
+  width: 549px;
+  height: 327px;
 
-  width: 100%;
-  height: 326px; 
+  background: url("./img/parrots.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 680px) {
+
+  .clip-block  {
+    width: 100%;
+    height: 100%;
+
+    margin-top: 0;
+  }
+  
 }
 
 .theyalow-video {
-  position: relative;
-
   width: 100%;
-  height: 326px;
+  height: 100%;
 
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .the-cool-block {
@@ -270,8 +349,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-left: 20px;
 
-  width: 453px;
+  width: 470px;
   height: 100%;
 
   font-size: 63px;
@@ -280,6 +360,14 @@
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 680px) {
+
+  .the-cool-block  {
+    display: none;
+  }
+  
 }
 
 .the-cool-block__span1 {
@@ -300,11 +388,33 @@
   height: 100%;
 }
 
+@media screen and (max-width: 680px) {
+
+  .right-arrow-block  {
+    display: none;
+  }
+  
+}
+
+.navigation-arrow {
+  cursor: pointer;
+}
+
 /* ------------------------------------------*/
 
 .theyalow-icons-area {
   width: 100%;
   height: 213px;
+}
+
+@media screen and (max-width: 680px) {
+
+  .theyalow-icons-area {
+    height: 174px;
+
+    background: url("./img/Layer\ 27\ copy@1X.png");
+  }
+
 }
 
 .theyalow-icons-area__menu {
@@ -337,6 +447,18 @@
   border-left: 1px solid #9b7d0844;
 }
 
+@media screen and (max-width: 680px) {
+
+  .theyalow-icons-area__menu__li {
+    border-right: none;
+  }
+  
+  .theyalow-icons-area__menu__li:first-child {
+    border-left: none;
+  }
+
+}
+
 .theyalow-icons-area__ref {
   text-decoration: none;
 
@@ -359,6 +481,21 @@
   height: 110px;
 }
 
+@media screen and (max-width: 680px) {
+
+  .theyalow-icons-area__ref {
+    font-size: 23px;
+  }
+
+  .theyalow-icons-area__ref__img {
+    width: 95px;
+    height: 70px;
+
+    padding-bottom: 10px;
+  }
+
+}
+
 .theyalow-icons-area__menu a.current,
 .theyalow-icons-area__menu a:hover {
   background: rgba(0,0,0,.1);
@@ -377,8 +514,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
 
-  border: 1px solid black;
+@media screen and (max-width: 680px) {
+
+  .theyalow-video-area {
+    height: auto;
+
+    background: none;
+
+    margin-top: 15px;
+  }
+
 }
 
 .theyalow-video-area__head {
@@ -398,8 +545,14 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+}
 
-  border: 1px solid black;
+@media screen and (max-width: 680px) {
+
+  .theyalow-video-area__head {
+    display: none;
+  }
+
 }
 
 .theyalow-video-area__main {
@@ -415,7 +568,17 @@
   justify-content: flex-start;
 }
 
+@media screen and (max-width: 680px) {
+
+  .theyalow-video-area__main {
+    height: auto;
+    padding: 0;
+  }
+
+}
+
 .theyalow-video-area__main__1 {
+  position: relative;
   width: 350px;
   height: 233px;
 
@@ -428,58 +591,134 @@
   font-family: "Segoe WP";
   font-weight: 300;
 
-  padding: 25px;
+  padding: 20px;
+  text-align: left;
+}
 
-  border: 1px solid black;
+@media screen and (max-width: 680px) {
+
+ .theyalow-video-area__main__1 {
+   width: 300px;
+   height: 232px;
+
+   margin-left: 9px;
+   margin-right: 9px;
+   margin-bottom: 9px;
+ }
+
 }
 
 .theyalow-video-area__main__2 {
-  width: 350px;
-  height: 233px;
+  width: 315px;
+  height: 232px;
 
-  position: relative;
+  background: url("./img/monkey.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-
-  border: 1px solid black;
+  margin-right: 34px;
 }
 
-.theyalow-video-area__main__2__img {
-  position: absolute;
+@media screen and (max-width: 680px) {
 
-  width: 312px;
-  height: 100%;
+  .theyalow-video-area__main__2 {
+     width: 315px;
+     height: 232px;
+
+     margin-right: 0;
+  }
+
 }
 
 .theyalow-video2 {
-  position: relative;
 
   width: 312px;
   height: 100%;
 
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 .theyalow-video-area__main__3 {
+  position: relative;
   width: 350px;
   height: 233px;
 
   background-color: #ec9e03;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  
-  border: 1px solid black;
+}
+
+.theyalow-video-area__main__3__notes {
+  display: none;
+}
+
+@media screen and (max-width: 680px) {
+
+  .theyalow-video-area__main__3 {
+    width: 100%;
+
+    background-image: linear-gradient(0deg, #f5c505 0%, #f5c505 100%);
+
+    justify-content: space-around;
+
+    font-family: "ArialMT", sans-serif;
+  }
+
+  .theyalow-video-area__main__3__notes {
+    display: block;
+    padding-top: 10px;
+  }
+
+  .input-data {
+    margin-top: 10px;
+    margin-left: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input[type="text"] {
+    display: inline-block;
+    border: none;
+    width: 200px;
+    height: 29px;
+    border-radius: 10px 0 0 10px;
+    vertical-align: middle;
+  }
+
+  input[type="submit"] {
+    display: inline-block;
+    width: 69px;
+    height: 29px;
+    border: none;
+    background: #e7a623;
+    border-radius: 0 10px 10px 0;
+
+    color: white;
+    font-size: 15px;    
+  }
+
 }
 
 .theyalow-video-area__main__3__img {
-  width: 164px;
-  height: 134px;
+  width: 190px;
+  height: 150px;
+}
+
+@media screen and (max-width: 680px) {
+
+  .theyalow-video-area__main__3__img {
+    width: 180px;
+    height: 160px;
+
+    margin: 40px;
+  }
+
 }
 
 .break {
@@ -495,10 +734,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 10px;
 
-  background-color: #beb47bfd;
+  background-color: #ddb101;
 
-  border: 1px solid black;
+  margin-top: -60px;
+}
+
+@media screen and (max-width: 680px) {
+
+  .theyalow-video-area__main__4 {
+    display: none;
+  }
+
 }
 
 .theyalow-video-area__main__4__date {
@@ -526,8 +774,14 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
 
-  border: 1px solid black;
+@media screen and (max-width: 680px) {
+
+  .theyalow-video-area__foot {
+    display: none;
+  }
+
 }
 
 .theyalow-video-area__foot__range {
@@ -561,6 +815,52 @@
   box-shadow: 0px 0px 1px #a09e8a;
 }
 
+._22 {
+  position: absolute;
+  left: 310px;
+  top: 10px;
+
+  color: white;
+  font-size: 23px;
+  font-family: "Segoe WP", sans-serif; 
+}
+
+.plus1 {
+  position: absolute;
+  left: 320px;
+  top: 190px;
+
+  color: white;
+  font-size: 23px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.plus2 {
+  position: absolute;
+  left: 325px;
+  top: 200px;
+
+  color: white;
+  font-size: 23px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+@media screen and (max-width: 680px) {
+
+  ._22 {
+    display: none;
+  }
+
+  .plus2 {
+    display: none;
+  }
+
+}
+
 /* ------------------------------------------*/
 
 .lower-div {
@@ -570,11 +870,98 @@
   background: url("./img/lower_background.svg");
 
   box-shadow: inset 0 -8px 6px -6px #000000;
+
+  padding-left: 138px;
+  padding-right: 138px;
+  padding-top: 40px;
+}
+
+.lower-div__head {
+  width: 100%;
+  height: auto;
+
+  font-size: 42px;
+  color: rgba(245, 197, 6, 255);
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  text-align: center;
+}
+
+@media screen and (max-width: 680px) {
+
+  .lower-div {
+    height: 487px;
+
+    padding-left: 21px;
+    padding-right: 29px;
+    padding-top: 43px;
+  }
+
+  .lower-div__head {
+    font-size: 38px;
+
+    margin-bottom: 25px;
+  }
+
+}
+
+.lower-div__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.lower-div__img {
+  width: 560px;
+  height: 298px;
+
+  margin-right: 55px;
+}
+
+.lower-div__list {
+  text-align: left;
+
+  list-style-image: url("./img/Ellipse\ 4@1X.png");
+
+  font-size: 25px;
+  color: rgba(169, 169, 167, 255);
+  font-family: "PT Sans", sans-serif;
+}
+
+.lower-div__list li {
+  padding-bottom: 20px;
+
+  list-style-type: none;
+
+  padding-left: 10px;
+}
+
+.lower-div__list li:nth-child(1){
+  padding-top: 60px;
+}
+
+@media screen and (max-width: 680px) {
+
+  .lower-div__img {
+    width: 570px;
+    height: 296px;
+  }
+
+  .lower-div__list {
+    display: none;
+  }
+
 }
 
 /* ------------------------------------------*/
 
+
 .theyalow-footer {
+  position: relative;
+
   display: inline-block;
 
   width: 100%;
@@ -587,7 +974,7 @@
   justify-content: flex-start;
   align-items: center;
 
-  padding-left: 140px;
+  padding-left: 120px;
 
   font-size: 29px;
   letter-spacing: 0px;
@@ -595,4 +982,23 @@
   font-family: "Lucida Sans", sans-serif;
   font-style: italic;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 680px) {
+
+  .theyalow-footer {
+    padding: 10px;
+    padding-left: 66px;
+
+    font-size: 20px;
+  }
+
+  .theyalow-footer__img {
+    position: relative;
+    margin-right: 10px;
+
+    width: 35px;
+    heiht: 35px;
+  }
+
 }
